@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-scroll';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import './Navbar.scss';
 
@@ -19,27 +19,27 @@ function Navbar() {
                     </div>
                     <ul className={ click ? 'nav-menu active' : 'nav-menu' }>
                         <li className="nav-item">
-                            <Link to="/" className="nav-links">
+                            <Link to="homepage" activeClass="active" spy={true} smooth = {true} className="nav-link">
                                 Home
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/about" className="nav-links">
+                            <Link to="aboutme" activeClass="active" spy={true} smooth = {true} className="nav-link">
                                 About Me
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/myprojects" className="nav-links">
+                            <Link to="myprojects" activeClass="active" spy={true} smooth = {true} className="nav-link">
                                 My Projects
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/mystack" className="nav-links">
+                            <Link to="mySkills" activeClass="active" spy={true} smooth = {true} className="nav-link">
                                 My Stack
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link to="/contact" className="nav-links">
+                            <Link to="contact" activeClass="active" spy={true} smooth = {true} className="nav-link">
                                 Contact Me
                             </Link>
                         </li>
